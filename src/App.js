@@ -12,7 +12,7 @@ const KEY = "f84fc31d";
 export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
-  const { movies, isLoading, error } = useMovies(query);
+  const [movies, isLoading, error] = useMovies(query);
 
   const [watched, setWatched] = useLocalStorageState([], "watched");
 
